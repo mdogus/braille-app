@@ -10,7 +10,7 @@ import UIKit
 import GameplayKit
 
 class ViewController: UIViewController {
-
+///Vieew did load
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBoard()
