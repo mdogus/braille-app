@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BRAIA_MSK_Harfler_sON.otf">
+            <string>BrailleMSK</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BrailleQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q24-vf-gZb">
+                                <rect key="frame" x="10" y="151" width="300.5" height="386.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-kA-nhE">
+                                        <rect key="frame" x="80" y="0.0" width="140" height="140"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="v4J-LP-csG"/>
+                                            <constraint firstAttribute="height" constant="140" id="vgy-zk-xoq"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-eq-n0L">
+                                        <rect key="frame" x="0.0" y="160" width="300.5" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoU-CN-y7D">
+                                        <rect key="frame" x="56.5" y="237.5" width="187" height="39"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="28" minY="5" maxX="28" maxY="5"/>
+                                        <state key="normal" title="Yanıtı Göster">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WfW-2l-HB3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-My-x02">
+                                        <rect key="frame" x="56" y="296.5" width="188" height="39"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="55" minY="5" maxX="55" maxY="5"/>
+                                        <state key="normal" title="Sonraki">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToNextLetter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOr-Gh-ZRJ"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GCK-9V-5L2">
+                                        <rect key="frame" x="73" y="355.5" width="154.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33B-GH-xJT">
+                                                <rect key="frame" x="0.0" y="5" width="97.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YQ7-hl-50y">
+                                                <rect key="frame" x="105.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="e3h-IO-M4N"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Braille Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D1-y2-NcW">
+                                <rect key="frame" x="-81.5" y="230" width="499" height="48.5"/>
+                                <fontDescription key="fontDescription" name="BrailleMSK" family="Braille MSK" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LLZ-T6-GdG">
+                                <rect key="frame" x="104" y="29.5" width="112" height="109"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZtP-DZ-qvk">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="32"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="segmentedOptionControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rja-KK-gcI"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-OB-miC">
+                                        <rect key="frame" x="0.0" y="39" width="112" height="32"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedOptionContractedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ycy-MW-VHp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMP-Iy-MRq">
+                                        <rect key="frame" x="8.5" y="78" width="95" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DDj-OB-miC" secondAttribute="trailing" id="MgM-Sy-Q1Z"/>
+                                    <constraint firstItem="DDj-OB-miC" firstAttribute="leading" secondItem="LLZ-T6-GdG" secondAttribute="leading" id="noh-cV-ndk"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Headline Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-Kq-S2L">
+                                <rect key="frame" x="128" y="0.0" width="42" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LLZ-T6-GdG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Nv-rU-qsx"/>
+                            <constraint firstItem="0D1-y2-NcW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="9Oh-3n-gZx"/>
+                            <constraint firstItem="LLZ-T6-GdG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="FK2-iF-vmv"/>
+                            <constraint firstItem="dhL-kA-nhE" firstAttribute="top" secondItem="Tn5-Kq-S2L" secondAttribute="bottom" constant="130" id="K8i-Wo-Tbl"/>
+                            <constraint firstItem="Tn5-Kq-S2L" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OIL-mY-iTY"/>
+                            <constraint firstItem="q24-vf-gZb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhu-kW-UMX"/>
+                            <constraint firstItem="q24-vf-gZb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="fMT-RJ-YDh"/>
+                            <constraint firstItem="0D1-y2-NcW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="8" id="s1C-4v-o2Y"/>
+                            <constraint firstItem="ZtP-DZ-qvk" firstAttribute="firstBaseline" secondItem="Tn5-Kq-S2L" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="zVD-z0-bgq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="Ffr-eq-n0L" id="8b7-8T-Iax"/>
+                        <outlet property="brailleBacgroundView" destination="dhL-kA-nhE" id="9c8-gj-fPf"/>
+                        <outlet property="brailleLabel" destination="0D1-y2-NcW" id="zpr-2i-dON"/>
+                        <outlet property="headlineLabel" destination="Tn5-Kq-S2L" id="Mtl-gc-SxL"/>
+                        <outlet property="segmentOptionsContracted" destination="DDj-OB-miC" id="XQE-7q-oX7"/>
+                        <outlet property="segmentedOptions" destination="ZtP-DZ-qvk" id="ZhV-jQ-NV6"/>
+                        <outlet property="statusLabel" destination="BMP-Iy-MRq" id="Cvv-mS-gY1"/>
+                        <outlet property="switchLabel" destination="33B-GH-xJT" id="ySs-ns-mC0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-65.625" y="91.901408450704224"/>
         </scene>
     </scenes>
 </document>
