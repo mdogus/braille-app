@@ -13,7 +13,41 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Item 1-->
+        <scene sceneID="5iZ-Zn-SWz">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWU-ku-9uC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="VQo-cv-Rat" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOH-Fz-Wug">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pSa-Df-ng3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="MG8-JR-3S6"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1374" y="-514"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bhe-31-RNX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wa-wQ-o5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController id="vCW-sf-Fws" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zEj-3a-ogv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VQo-cv-Rat" kind="relationship" relationship="viewControllers" id="0xV-VV-iRE"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="D4F-Q0-13F"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-2385" y="-177"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BrailleQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,6 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="MrR-Fx-SuN"/>
                     <connections>
                         <outlet property="answerLabel" destination="Ffr-eq-n0L" id="8b7-8T-Iax"/>
                         <outlet property="brailleBacgroundView" destination="dhL-kA-nhE" id="9c8-gj-fPf"/>
@@ -159,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.625" y="91.901408450704224"/>
+            <point key="canvasLocation" x="-1374" y="154"/>
         </scene>
     </scenes>
 </document>
