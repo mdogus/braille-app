@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vCW-sf-Fws">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -13,26 +13,25 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item 1-->
+        <!--Öğren-->
         <scene sceneID="5iZ-Zn-SWz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dWU-ku-9uC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="VQo-cv-Rat" sceneMemberID="viewController">
+                <viewController id="VQo-cv-Rat" customClass="LearnTabViewController" customModule="BrailleQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XOH-Fz-Wug">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pSa-Df-ng3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="MG8-JR-3S6"/>
+                    <tabBarItem key="tabBarItem" title="Öğren" image="book" catalog="system" id="MG8-JR-3S6"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWU-ku-9uC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1374" y="-514"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bhe-31-RNX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wa-wQ-o5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="vCW-sf-Fws" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zEj-3a-ogv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -44,10 +43,11 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="D4F-Q0-13F"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wa-wQ-o5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2385" y="-177"/>
         </scene>
-        <!--Item-->
+        <!--Alıştırma-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BrailleQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,28 +55,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q24-vf-gZb">
-                                <rect key="frame" x="10" y="151" width="300.5" height="386.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q24-vf-gZb">
+                                <rect key="frame" x="66" y="232" width="188" height="264.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-kA-nhE">
-                                        <rect key="frame" x="80" y="0.0" width="140" height="140"/>
+                                        <rect key="frame" x="24" y="0.0" width="140" height="70"/>
                                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="v4J-LP-csG"/>
-                                            <constraint firstAttribute="height" constant="140" id="vgy-zk-xoq"/>
+                                            <constraint firstAttribute="height" constant="70" id="vgy-zk-xoq"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-eq-n0L">
-                                        <rect key="frame" x="0.0" y="160" width="300.5" height="57.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                        <rect key="frame" x="5.5" y="86" width="177" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoU-CN-y7D">
-                                        <rect key="frame" x="56.5" y="237.5" width="187" height="39"/>
+                                        <rect key="frame" x="0.5" y="135.5" width="187" height="33"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <inset key="contentEdgeInsets" minX="28" minY="5" maxX="28" maxY="5"/>
+                                        <inset key="contentEdgeInsets" minX="28" minY="2" maxX="28" maxY="2"/>
                                         <state key="normal" title="Yanıtı Göster">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -85,10 +85,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-My-x02">
-                                        <rect key="frame" x="56" y="296.5" width="188" height="39"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="188" height="33"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <inset key="contentEdgeInsets" minX="55" minY="5" maxX="55" maxY="5"/>
+                                        <inset key="contentEdgeInsets" minX="55" minY="2" maxX="55" maxY="2"/>
                                         <state key="normal" title="Sonraki">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -96,8 +96,8 @@
                                             <action selector="goToNextLetter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOr-Gh-ZRJ"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GCK-9V-5L2">
-                                        <rect key="frame" x="73" y="355.5" width="154.5" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GCK-9V-5L2">
+                                        <rect key="frame" x="21" y="233.5" width="146.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33B-GH-xJT">
                                                 <rect key="frame" x="0.0" y="5" width="97.5" height="20.5"/>
@@ -106,7 +106,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YQ7-hl-50y">
-                                                <rect key="frame" x="105.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="switchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="e3h-IO-M4N"/>
                                                 </connections>
@@ -115,14 +115,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Braille Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D1-y2-NcW">
-                                <rect key="frame" x="-81.5" y="230" width="499" height="48.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Braille Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D1-y2-NcW">
+                                <rect key="frame" x="-80.5" y="247" width="499" height="48.5"/>
                                 <fontDescription key="fontDescription" name="BrailleMSK" family="Braille MSK" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LLZ-T6-GdG">
-                                <rect key="frame" x="104" y="29.5" width="112" height="109"/>
+                                <rect key="frame" x="104" y="114.5" width="112" height="109"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZtP-DZ-qvk">
                                         <rect key="frame" x="0.0" y="0.0" width="112" height="32"/>
@@ -160,8 +160,8 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Headline Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-Kq-S2L">
-                                <rect key="frame" x="128" y="0.0" width="42" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <rect key="frame" x="128" y="56" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -169,18 +169,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LLZ-T6-GdG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Nv-rU-qsx"/>
-                            <constraint firstItem="0D1-y2-NcW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="9Oh-3n-gZx"/>
-                            <constraint firstItem="LLZ-T6-GdG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="FK2-iF-vmv"/>
-                            <constraint firstItem="dhL-kA-nhE" firstAttribute="top" secondItem="Tn5-Kq-S2L" secondAttribute="bottom" constant="130" id="K8i-Wo-Tbl"/>
+                            <constraint firstItem="0D1-y2-NcW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-13" id="9Oh-3n-gZx"/>
+                            <constraint firstItem="LLZ-T6-GdG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-115" id="FK2-iF-vmv"/>
                             <constraint firstItem="Tn5-Kq-S2L" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OIL-mY-iTY"/>
                             <constraint firstItem="q24-vf-gZb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhu-kW-UMX"/>
-                            <constraint firstItem="q24-vf-gZb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="fMT-RJ-YDh"/>
+                            <constraint firstItem="BMP-Iy-MRq" firstAttribute="top" secondItem="Tn5-Kq-S2L" secondAttribute="bottom" constant="90.5" id="dyY-bB-0vS"/>
+                            <constraint firstItem="q24-vf-gZb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="fMT-RJ-YDh"/>
                             <constraint firstItem="0D1-y2-NcW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="8" id="s1C-4v-o2Y"/>
-                            <constraint firstItem="ZtP-DZ-qvk" firstAttribute="firstBaseline" secondItem="Tn5-Kq-S2L" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="zVD-z0-bgq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="MrR-Fx-SuN"/>
+                    <tabBarItem key="tabBarItem" title="Alıştırma" image="rosette" catalog="system" id="MrR-Fx-SuN"/>
                     <connections>
                         <outlet property="answerLabel" destination="Ffr-eq-n0L" id="8b7-8T-Iax"/>
                         <outlet property="brailleBacgroundView" destination="dhL-kA-nhE" id="9c8-gj-fPf"/>
@@ -197,4 +196,8 @@
             <point key="canvasLocation" x="-1374" y="154"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="rosette" catalog="system" width="50" height="64"/>
+    </resources>
 </document>

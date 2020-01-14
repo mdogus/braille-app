@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA1B790F2381D097007C496A /* DoubleLetterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B790E2381D097007C496A /* DoubleLetterContract.swift */; };
+		CA23A32023CE27E800F65EC5 /* LearnTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */; };
 		CA60A1CE236EF0DD00B02DF9 /* SingleLetterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60A1CD236EF0DD00B02DF9 /* SingleLetterContract.swift */; };
 		CA8CC336236E2015000EA9BF /* BrailleSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8CC335236E2015000EA9BF /* BrailleSign.swift */; };
 		CAEDD5ED233BCF57004EF53D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDD5EC233BCF57004EF53D /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		CA1B790E2381D097007C496A /* DoubleLetterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLetterContract.swift; sourceTree = "<group>"; };
+		CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTabViewController.swift; sourceTree = "<group>"; };
 		CA60A1CD236EF0DD00B02DF9 /* SingleLetterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLetterContract.swift; sourceTree = "<group>"; };
 		CA8CC335236E2015000EA9BF /* BrailleSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleSign.swift; sourceTree = "<group>"; };
 		CAEDD5E9233BCF57004EF53D /* BrailleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CA23A32123CE27FA00F65EC5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAEDD5F0233BCF57004EF53D /* ViewController.swift */,
+				CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		CAEDD5E0233BCF57004EF53D = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +88,7 @@
 			children = (
 				CAEDD5EC233BCF57004EF53D /* AppDelegate.swift */,
 				CAEDD5EE233BCF57004EF53D /* SceneDelegate.swift */,
-				CAEDD5F0233BCF57004EF53D /* ViewController.swift */,
+				CA23A32123CE27FA00F65EC5 /* View Controllers */,
 				CA1B79102381D0C1007C496A /* Models */,
 				CAEDD5F2233BCF57004EF53D /* Main.storyboard */,
 				CAEDD5F5233BCF58004EF53D /* Assets.xcassets */,
@@ -169,6 +180,7 @@
 			files = (
 				CA60A1CE236EF0DD00B02DF9 /* SingleLetterContract.swift in Sources */,
 				CA8CC336236E2015000EA9BF /* BrailleSign.swift in Sources */,
+				CA23A32023CE27E800F65EC5 /* LearnTabViewController.swift in Sources */,
 				CAEDD5F1233BCF57004EF53D /* ViewController.swift in Sources */,
 				CAEDD5ED233BCF57004EF53D /* AppDelegate.swift in Sources */,
 				CA1B790F2381D097007C496A /* DoubleLetterContract.swift in Sources */,
