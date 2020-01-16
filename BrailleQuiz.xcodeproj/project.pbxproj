@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A217FC50A5C2143E1660A61E /* Pods_BrailleQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B69D208EB422D53104DB8C5 /* Pods_BrailleQuiz.framework */; };
 		CA1B790F2381D097007C496A /* DoubleLetterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B790E2381D097007C496A /* DoubleLetterContract.swift */; };
 		CA23A32023CE27E800F65EC5 /* LearnTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */; };
 		CA60A1CE236EF0DD00B02DF9 /* SingleLetterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60A1CD236EF0DD00B02DF9 /* SingleLetterContract.swift */; };
 		CA8CC336236E2015000EA9BF /* BrailleSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8CC335236E2015000EA9BF /* BrailleSign.swift */; };
+		CA92B00823D0DE9600903A91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA92B00723D0DE9600903A91 /* GoogleService-Info.plist */; };
 		CAEDD5ED233BCF57004EF53D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDD5EC233BCF57004EF53D /* AppDelegate.swift */; };
 		CAEDD5EF233BCF57004EF53D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDD5EE233BCF57004EF53D /* SceneDelegate.swift */; };
 		CAEDD5F1233BCF57004EF53D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDD5F0233BCF57004EF53D /* ViewController.swift */; };
@@ -21,11 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B69D208EB422D53104DB8C5 /* Pods_BrailleQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrailleQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7BBF363E6B1227138EF8DD2 /* Pods-BrailleQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrailleQuiz.release.xcconfig"; path = "Target Support Files/Pods-BrailleQuiz/Pods-BrailleQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		C7C950822877FB288F50BD50 /* Pods-BrailleQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrailleQuiz.debug.xcconfig"; path = "Target Support Files/Pods-BrailleQuiz/Pods-BrailleQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1B790E2381D097007C496A /* DoubleLetterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLetterContract.swift; sourceTree = "<group>"; };
 		CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTabViewController.swift; sourceTree = "<group>"; };
 		CA60A1CD236EF0DD00B02DF9 /* SingleLetterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLetterContract.swift; sourceTree = "<group>"; };
 		CA8CC335236E2015000EA9BF /* BrailleSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleSign.swift; sourceTree = "<group>"; };
-		CAEDD5E9233BCF57004EF53D /* BrailleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA92B00723D0DE9600903A91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAEDD5E9233BCF57004EF53D /* BrailleForAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleForAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEDD5EC233BCF57004EF53D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAEDD5EE233BCF57004EF53D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CAEDD5F0233BCF57004EF53D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,12 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A217FC50A5C2143E1660A61E /* Pods_BrailleQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246361DEC000BA22AD64F730 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B69D208EB422D53104DB8C5 /* Pods_BrailleQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70E18FA9EF60D5B5C846A3EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7C950822877FB288F50BD50 /* Pods-BrailleQuiz.debug.xcconfig */,
+				A7BBF363E6B1227138EF8DD2 /* Pods-BrailleQuiz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CA1B79102381D0C1007C496A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +96,15 @@
 				CAEDD602233BD04F004EF53D /* Font */,
 				CAEDD5EB233BCF57004EF53D /* BrailleQuiz */,
 				CAEDD5EA233BCF57004EF53D /* Products */,
+				70E18FA9EF60D5B5C846A3EA /* Pods */,
+				246361DEC000BA22AD64F730 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CAEDD5EA233BCF57004EF53D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAEDD5E9233BCF57004EF53D /* BrailleQuiz.app */,
+				CAEDD5E9233BCF57004EF53D /* BrailleForAll.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +114,7 @@
 			children = (
 				CAEDD5EC233BCF57004EF53D /* AppDelegate.swift */,
 				CAEDD5EE233BCF57004EF53D /* SceneDelegate.swift */,
+				CA92B00723D0DE9600903A91 /* GoogleService-Info.plist */,
 				CA23A32123CE27FA00F65EC5 /* View Controllers */,
 				CA1B79102381D0C1007C496A /* Models */,
 				CAEDD5F2233BCF57004EF53D /* Main.storyboard */,
@@ -113,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAEDD5FD233BCF58004EF53D /* Build configuration list for PBXNativeTarget "BrailleQuiz" */;
 			buildPhases = (
+				151978CECD17E039D5ADCD1F /* [CP] Check Pods Manifest.lock */,
 				CAEDD5E5233BCF57004EF53D /* Sources */,
 				CAEDD5E6233BCF57004EF53D /* Frameworks */,
 				CAEDD5E7233BCF57004EF53D /* Resources */,
+				D5C0CB0A267E8ED593E66469 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,7 +152,7 @@
 			);
 			name = BrailleQuiz;
 			productName = BrailleQuiz;
-			productReference = CAEDD5E9233BCF57004EF53D /* BrailleQuiz.app */;
+			productReference = CAEDD5E9233BCF57004EF53D /* BrailleForAll.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,12 +195,55 @@
 			files = (
 				CAEDD5F9233BCF58004EF53D /* LaunchScreen.storyboard in Resources */,
 				CAEDD5F6233BCF58004EF53D /* Assets.xcassets in Resources */,
+				CA92B00823D0DE9600903A91 /* GoogleService-Info.plist in Resources */,
 				CAEDD5F4233BCF57004EF53D /* Main.storyboard in Resources */,
 				CAEDD604233BD08B004EF53D /* BRAIA_MSK_Harfler_sON.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		151978CECD17E039D5ADCD1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrailleQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C0CB0A267E8ED593E66469 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrailleQuiz/Pods-BrailleQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrailleQuiz/Pods-BrailleQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrailleQuiz/Pods-BrailleQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAEDD5E5233BCF57004EF53D /* Sources */ = {
@@ -326,6 +398,7 @@
 		};
 		CAEDD5FE233BCF58004EF53D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C950822877FB288F50BD50 /* Pods-BrailleQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,8 +408,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = personal.mdogus.BrailleQuiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = personal.mdogus.BrailleApp;
+				PRODUCT_NAME = BrailleForAll;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,6 +417,7 @@
 		};
 		CAEDD5FF233BCF58004EF53D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7BBF363E6B1227138EF8DD2 /* Pods-BrailleQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,8 +427,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = personal.mdogus.BrailleQuiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = personal.mdogus.BrailleApp;
+				PRODUCT_NAME = BrailleForAll;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

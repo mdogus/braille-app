@@ -8,12 +8,24 @@
 
 import UIKit
 import GameplayKit
+import Firebase
 
 class ViewController: UIViewController {
-///Vieew did load
+    
+    var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBoard()
+        //Banner
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+        addBannerViewToView(bannerView)
+        
+        
         //Labels
         headlineLabel.text = "Alıştırma Yap"
         switchLabel.text = "Karıştır"
@@ -153,6 +165,28 @@ class ViewController: UIViewController {
         } else {
             answerLabel.text = "Hata 2"
         }
+    }
+    
+    //AdMob function
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+     bannerView.translatesAutoresizingMaskIntoConstraints = false
+     view.addSubview(bannerView)
+     view.addConstraints(
+       [NSLayoutConstraint(item: bannerView,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: bottomLayoutGuide,
+                           attribute: .top,
+                           multiplier: 1,
+                           constant: 0),
+        NSLayoutConstraint(item: bannerView,
+                           attribute: .centerX,
+                           relatedBy: .equal,
+                           toItem: view,
+                           attribute: .centerX,
+                           multiplier: 1,
+                           constant: 0)
+       ])
     }
 }
 
