@@ -30,10 +30,17 @@ class ViewController: UIViewController {
         headlineLabel.text = "Alıştırma Yap"
         switchLabel.text = "Karıştır"
         //Braille label background
+        brailleBacgroundView.backgroundColor = UIColor(red: 255/255, green: 160/255, blue: 122/255, alpha: 1)
         brailleBacgroundView.layer.borderWidth = 5
+        brailleBacgroundView.layer.borderColor = UIColor.white.cgColor
         brailleBacgroundView.layer.cornerRadius = 20
-        brailleBacgroundView.layer.borderColor = UIColor.black.cgColor
-        
+        brailleBacgroundView.layer.shadowPath = UIBezierPath(rect: brailleBacgroundView.bounds).cgPath
+        brailleBacgroundView.layer.shadowColor = UIColor.black.cgColor
+        brailleBacgroundView.layer.shadowOpacity = 0.4
+        brailleBacgroundView.layer.shadowRadius = 20
+        brailleBacgroundView.layer.shadowOffset = CGSize(width: 1, height: 3)
+        //Segmented options
+        segmentedOptions.backgroundColor = UIColor(red: 255/255, green: 160/255, blue: 122/255, alpha: 1)
         segmentedOptions.removeAllSegments()
         let segments = ["Harfler", "Sayılar", "Kısaltmalar"]
         for segment in segments {
@@ -41,6 +48,7 @@ class ViewController: UIViewController {
         }
         segmentedOptions.selectedSegmentIndex = 0
         
+        segmentOptionsContracted.backgroundColor = UIColor(red: 255/255, green: 160/255, blue: 122/255, alpha: 1)
         segmentOptionsContracted.removeAllSegments()
         let segments2 = ["1 Harfli", "2 Harfli", "Hece", "Kök", "Parça"]
         for segment in segments2 {

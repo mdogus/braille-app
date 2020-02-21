@@ -10,7 +10,9 @@
 		A217FC50A5C2143E1660A61E /* Pods_BrailleQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B69D208EB422D53104DB8C5 /* Pods_BrailleQuiz.framework */; };
 		CA1B790F2381D097007C496A /* DoubleLetterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B790E2381D097007C496A /* DoubleLetterContract.swift */; };
 		CA23A32023CE27E800F65EC5 /* LearnTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */; };
+		CA39B62123FB1F5D00D30D42 /* LearnTabDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39B62023FB1F5D00D30D42 /* LearnTabDetailsVC.swift */; };
 		CA60A1CE236EF0DD00B02DF9 /* SingleLetterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60A1CD236EF0DD00B02DF9 /* SingleLetterContract.swift */; };
+		CA802B5B23FDB20900BC61D0 /* LearnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA802B5A23FDB20900BC61D0 /* LearnCell.swift */; };
 		CA8CC336236E2015000EA9BF /* BrailleSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8CC335236E2015000EA9BF /* BrailleSign.swift */; };
 		CA92B00823D0DE9600903A91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA92B00723D0DE9600903A91 /* GoogleService-Info.plist */; };
 		CAEDD5ED233BCF57004EF53D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEDD5EC233BCF57004EF53D /* AppDelegate.swift */; };
@@ -28,7 +30,9 @@
 		C7C950822877FB288F50BD50 /* Pods-BrailleQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrailleQuiz.debug.xcconfig"; path = "Target Support Files/Pods-BrailleQuiz/Pods-BrailleQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1B790E2381D097007C496A /* DoubleLetterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLetterContract.swift; sourceTree = "<group>"; };
 		CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTabViewController.swift; sourceTree = "<group>"; };
+		CA39B62023FB1F5D00D30D42 /* LearnTabDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTabDetailsVC.swift; sourceTree = "<group>"; };
 		CA60A1CD236EF0DD00B02DF9 /* SingleLetterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLetterContract.swift; sourceTree = "<group>"; };
+		CA802B5A23FDB20900BC61D0 /* LearnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCell.swift; sourceTree = "<group>"; };
 		CA8CC335236E2015000EA9BF /* BrailleSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleSign.swift; sourceTree = "<group>"; };
 		CA92B00723D0DE9600903A91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAEDD5E9233BCF57004EF53D /* BrailleForAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleForAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +89,19 @@
 			isa = PBXGroup;
 			children = (
 				CAEDD5F0233BCF57004EF53D /* ViewController.swift */,
-				CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */,
+				CA802B5923FDB1A800BC61D0 /* Learn Tab */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CA802B5923FDB1A800BC61D0 /* Learn Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CA23A31F23CE27E800F65EC5 /* LearnTabViewController.swift */,
+				CA39B62023FB1F5D00D30D42 /* LearnTabDetailsVC.swift */,
+				CA802B5A23FDB20900BC61D0 /* LearnCell.swift */,
+			);
+			path = "Learn Tab";
 			sourceTree = "<group>";
 		};
 		CAEDD5E0233BCF57004EF53D = {
@@ -252,8 +266,10 @@
 			files = (
 				CA60A1CE236EF0DD00B02DF9 /* SingleLetterContract.swift in Sources */,
 				CA8CC336236E2015000EA9BF /* BrailleSign.swift in Sources */,
+				CA39B62123FB1F5D00D30D42 /* LearnTabDetailsVC.swift in Sources */,
 				CA23A32023CE27E800F65EC5 /* LearnTabViewController.swift in Sources */,
 				CAEDD5F1233BCF57004EF53D /* ViewController.swift in Sources */,
+				CA802B5B23FDB20900BC61D0 /* LearnCell.swift in Sources */,
 				CAEDD5ED233BCF57004EF53D /* AppDelegate.swift in Sources */,
 				CA1B790F2381D097007C496A /* DoubleLetterContract.swift in Sources */,
 				CAEDD5EF233BCF57004EF53D /* SceneDelegate.swift in Sources */,
