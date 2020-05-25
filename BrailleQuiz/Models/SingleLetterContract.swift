@@ -143,4 +143,65 @@ enum SingleLetterContract {
             return "z"
         }
     }
+    
+    var learnTab: String {
+        switch self {
+        case .a:
+            return "aynı (a)"
+        case .b:
+            return "büyük (b)"
+        case .c:
+            return "can (c)"
+        case .ç:
+            return "çok (ç)"
+        case .d:
+            return "daha (d)"
+        case .e:
+            return "ekonomi (e)"
+        case .f:
+            return "fakat (f)"
+        case .g:
+            return "göre (g)"
+        case .ğ:
+            return "eğer (ğ)"
+        case  .h:
+            return "her (h)"
+        case .ı:
+            return "kısa (ı)"
+        case .i:
+            return "için (i)"
+        case .j:
+            return "gün (j)"
+        case .k:
+            return "kadar (k)"
+        case .l:
+            return "ilgi (l)"
+        case .m:
+            return "meydan (m)"
+        case .n:
+            return "neden (n)"
+        case .ö:
+            return "öyle (ö)"
+        case .p:
+            return "para (p)"
+        case .r:
+            return "artık (r)"
+        case .s:
+            return "sonra (s)"
+        case .ş:
+            return "şey (ş)"
+        case .t:
+            return "taraf (t)"
+        case .u:
+            return "uygun (u)"
+        case .ü:
+            return "dünya (ü)"
+        case .v:
+            return "var (v)"
+        case .y:
+            return "yok (y)"
+        case .z:
+            return "zaman (z)"
+        }
+    }
 }

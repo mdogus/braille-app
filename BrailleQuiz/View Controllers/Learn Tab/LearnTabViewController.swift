@@ -91,7 +91,7 @@ class LearnTabViewController: UIViewController, UITableViewDelegate, UITableView
         } else if selectedRow == 3 {
             performSegue(withIdentifier: "toLearnDetailsVC", sender: nil)
         } else if selectedRow == 4 {
-            
+            performSegue(withIdentifier: "toLearnDetailsVC", sender: nil)
         } else if selectedRow == 5 {
             performSegue(withIdentifier: "toLearnDetailsVC", sender: nil)
         }

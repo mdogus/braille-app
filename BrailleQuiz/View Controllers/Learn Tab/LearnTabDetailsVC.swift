@@ -81,7 +81,7 @@ class LearnTabDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataS
         } else if chosenRow == 3 {
             arrayCount = numbers.count
         } else if chosenRow == 4 {
-            
+            arrayCount = punctuationMarks.count
         } else if chosenRow == 5 {
             arrayCount = singleLetterContracts.count
         }
@@ -102,9 +102,10 @@ class LearnTabDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataS
             cell.printLabel.text = numbers[indexPath.row]
             cell.brailleLabel.text = "K\(numbers[indexPath.row])"
         } else if chosenRow == 4 {
-            
+            cell.printLabel.text = punctuationMarks[indexPath.row]
+            cell.brailleLabel.text = punctuationLabel[indexPath.row]
         } else if chosenRow == 5 {
-            cell.printLabel.text = singleLetterContracts[indexPath.row].word
+            cell.printLabel.text = singleLetterContracts[indexPath.row].learnTab
             cell.brailleLabel.text = singleLetterContracts[indexPath.row].sign
         }
             
