@@ -14,6 +14,12 @@ class ViewController: UIViewController {
     
     var bannerView: GADBannerView!
     
+    // Karıştır düğmesi açıkken kullanılacak indexler:
+    var indexForLetters = 0
+    var indexForNumbers = 0
+    var indexForSingleLC = 0
+    var indexForDoubleLC = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBoard()
@@ -67,6 +73,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var brailleBacgroundView: UIView!
     @IBOutlet weak var brailleLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var shuffleSwitch: UISwitch!
     
     @IBAction func segmentedOptionControl(_ sender: Any) {
         updateBoard()
@@ -102,7 +109,41 @@ class ViewController: UIViewController {
     }
     
     @IBAction func goToNextLetter(_ sender: Any) {
-        updateBoard()
+        if shuffleSwitch.isOn == false {
+            let selectedSegmentIndex = segmentedOptions.selectedSegmentIndex
+            
+            if selectedSegmentIndex == 0 {
+                if indexForLetters < (letters.count - 1) {
+                    indexForLetters += 1
+                    updateBoard()
+                } else {
+                    indexForLetters = 0
+                }
+            } else if selectedSegmentIndex == 1 {
+                if indexForNumbers < (numbers.count - 1) {
+                    indexForNumbers += 1
+                    updateBoard()
+                } else {
+                    indexForNumbers = 0
+                }
+            } else if selectedSegmentIndex == 2 {
+                let selectedSegmentIndex = segmentOptionsContracted.selectedSegmentIndex
+                
+                if selectedSegmentIndex == 0 {
+                    if indexForSingleLC < (singleLetterContracts.count - 1) {
+                        indexForSingleLC += 1
+                        updateBoard()
+                    } else {
+                        indexForSingleLC = 0
+                    }
+                } else if selectedSegmentIndex == 1 {
+                    // iki harfli kısaltmalar için counter ekle
+                    // iki harfli kısaltmalar için array ekle
+                }
+            }
+        } else {
+            updateBoard()
+        }
     }
     
     @IBAction func switchTapped(_ sender: Any) {
@@ -124,54 +165,103 @@ class ViewController: UIViewController {
         var indexOfSelectedSegment = segmentedOptions.selectedSegmentIndex
         var indexOfSelectedSegContracted = segmentOptionsContracted.selectedSegmentIndex
         
-        getRandomSingleLetterContract(singleLetterContractLabel)
-        getRandomDoubleLetterContract(doubleLetterContractLabel)
-        
-        if indexOfSelectedSegment == 0 { // Harfler
-            let index = getRandomIndex(letters)
-            brailleLabel.text = letters[index]
-            statusLabel.text = "Harfler görüntülenmektedir."
-            segmentOptionsContracted.isHidden = true
-            indexOfSelectedSegment = 0
-        } else if indexOfSelectedSegment == 1 {
-            let index = getRandomIndex(numbers)
-            brailleLabel.text = "K" + numbers[index]
-            statusLabel.text = "1-50 arası sayılar görüntülenmektedir."
-            segmentOptionsContracted.isHidden = true
-            indexOfSelectedSegment = 1
-        } else if indexOfSelectedSegment == 2 {
-            indexOfSelectedSegment = 2
-            //indexOfSelectedSegContracted = 0
+        if shuffleSwitch.isOn == true {
+            getRandomSingleLetterContract(singleLetterContractLabel)
+            getRandomDoubleLetterContract(doubleLetterContractLabel)
             
-            if indexOfSelectedSegContracted == 0 { // 1 Harfli
-                brailleLabel.text = singleLetterContractLabel.sign
-                statusLabel.text = "Bir harfli kısaltmalar görüntülenmektedir."
-                segmentOptionsContracted.isHidden = false
-                indexOfSelectedSegContracted = 0
-            } else if indexOfSelectedSegContracted == 1 { // 2 Harfli
-                brailleLabel.text = doubleLetterContractLabel.sign
-                statusLabel.text = "İki harfli kısaltmalar görüntülenmektedir."
-                segmentOptionsContracted.isHidden = false
-                indexOfSelectedSegContracted = 1
-            } else if indexOfSelectedSegContracted == 2 { //
-                //brailleLabel.text = singleLetterContractLabel.sign
-                statusLabel.text = "hece kısaltmaları görüntülenmektedir."
-                segmentOptionsContracted.isHidden = false
-                indexOfSelectedSegContracted = 2
-            } else if indexOfSelectedSegContracted == 3 {
-                //brailleLabel.text = singleLetterContractLabel.sign
-                statusLabel.text = "Kelime kökü kısaltmaları görüntülenmektedir."
-                segmentOptionsContracted.isHidden = false
-                indexOfSelectedSegContracted = 3
-            } else {
-                //brailleLabel.text = singleLetterContractLabel.sign
-                statusLabel.text = "Kelime parçası kısaltmaları görüntülenmektedir."
+            if indexOfSelectedSegment == 0 { // Harfler
+                let index = getRandomIndex(letters)
+                brailleLabel.text = letters[index]
+                statusLabel.text = "Harfler görüntülenmektedir."
+                segmentOptionsContracted.isHidden = true
+                indexOfSelectedSegment = 0
+            } else if indexOfSelectedSegment == 1 {
+                let index = getRandomIndex(numbers)
+                brailleLabel.text = "K" + numbers[index]
+                statusLabel.text = "1-50 arası sayılar görüntülenmektedir."
+                segmentOptionsContracted.isHidden = true
+                indexOfSelectedSegment = 1
+            } else if indexOfSelectedSegment == 2 {
+                indexOfSelectedSegment = 2
+                //indexOfSelectedSegContracted = 0
                 
-                segmentOptionsContracted.isHidden = false
-                indexOfSelectedSegContracted = 4
+                if indexOfSelectedSegContracted == 0 { // 1 Harfli
+                    brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "Bir harfli kısaltmalar görüntülenmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 0
+                } else if indexOfSelectedSegContracted == 1 { // 2 Harfli
+                    brailleLabel.text = doubleLetterContractLabel.sign
+                    statusLabel.text = "İki harfli kısaltmalar görüntülenmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 1
+                } else if indexOfSelectedSegContracted == 2 { //
+                    //brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "hece kısaltmaları görüntülenmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 2
+                } else if indexOfSelectedSegContracted == 3 {
+                    //brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "Kelime kökü kısaltmaları görüntülenmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 3
+                } else {
+                    //brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "Kelime parçası kısaltmaları görüntülenmektedir."
+                    
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 4
+                }
+            } else {
+                answerLabel.text = "Hata 2"
             }
         } else {
-            answerLabel.text = "Hata 2"
+            if indexOfSelectedSegment == 0 { // Harfler
+                let index = indexForLetters
+                brailleLabel.text = letters[index]
+                statusLabel.text = "Harfler gösterilmektedir."
+                segmentOptionsContracted.isHidden = true
+                indexOfSelectedSegment = 0
+            } else if indexOfSelectedSegment == 1 {
+                let index = indexForNumbers
+                brailleLabel.text = "K" + numbers[index]
+                statusLabel.text = "1-50 arası sayılar gösterilmektedir."
+                segmentOptionsContracted.isHidden = true
+                indexOfSelectedSegment = 1
+            } else if indexOfSelectedSegment == 2 {
+                indexOfSelectedSegment = 2
+                
+                if indexOfSelectedSegContracted == 0 { // 1 Harfli
+                    let index = indexForSingleLC
+                    brailleLabel.text = singleLetterContracts[index].sign
+                    statusLabel.text = "Bir harfli kısaltmalar gösterilmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 0
+                } else if indexOfSelectedSegContracted == 1 { // 2 Harfli
+                    brailleLabel.text = doubleLetterContractLabel.sign
+                    statusLabel.text = "İki harfli kısaltmalar gösterilmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 1
+                } else if indexOfSelectedSegContracted == 2 { //
+                    //brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "Hece kısaltmaları gösterilmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 2
+                } else if indexOfSelectedSegContracted == 3 {
+                    //brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "Kelime kökü kısaltmaları görüntülenmektedir."
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 3
+                } else {
+                    //brailleLabel.text = singleLetterContractLabel.sign
+                    statusLabel.text = "Kelime parçası kısaltmaları görüntülenmektedir."
+                    
+                    segmentOptionsContracted.isHidden = false
+                    indexOfSelectedSegContracted = 4
+                }
+            } else {
+                answerLabel.text = "Hata 2"
+            }
         }
     }
     

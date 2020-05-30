@@ -281,6 +281,7 @@
                         <outlet property="headlineLabel" destination="Tn5-Kq-S2L" id="Mtl-gc-SxL"/>
                         <outlet property="segmentOptionsContracted" destination="DDj-OB-miC" id="XQE-7q-oX7"/>
                         <outlet property="segmentedOptions" destination="ZtP-DZ-qvk" id="ZhV-jQ-NV6"/>
+                        <outlet property="shuffleSwitch" destination="YQ7-hl-50y" id="ctD-uz-gx8"/>
                         <outlet property="statusLabel" destination="BMP-Iy-MRq" id="Cvv-mS-gY1"/>
                         <outlet property="switchLabel" destination="33B-GH-xJT" id="ySs-ns-mC0"/>
                     </connections>
